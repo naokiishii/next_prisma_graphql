@@ -1,0 +1,1 @@
+# next_prisma_graphql
