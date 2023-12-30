@@ -13,7 +13,7 @@ export const TodoList: FC = () => {
   const [todoTitle, setTodoTitle] = useState('')
   const [todos, setTodos] = useState<TodosQuery['todos']>([])
   const { loading, error, data, refetch } = useTodosQuery()
-  const [addTodoMutation] = useAddTodoMutation()
+  const [addTodoMutation, addTodoMutationResult] = useAddTodoMutation()
   const [updateTodoMutation] = useUpdateTodoMutation()
   const [deleteTodoMutation] = useDeleteTodoMutation()
   useEffect(() => {
@@ -94,7 +94,7 @@ export const TodoList: FC = () => {
                 onChange={(e) => handleChange(todo.id, e.target.checked)}
               />
               <span> / </span>
-              <button onClick={() => handleDelete(todo.id)}>🗑</button>
+              <button onClick={() => handleDelete(todo.id)}>🗑️</button>
             </li>
           )
         })}
