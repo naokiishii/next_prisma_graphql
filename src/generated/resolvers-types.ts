@@ -17,6 +17,12 @@ export type Scalars = {
   DateTime: string;
 };
 
+export type Hello = {
+  __typename?: 'Hello';
+  message?: Maybe<Scalars['String']>;
+  textId?: Maybe<Scalars['String']>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addTodo: Todo;
@@ -43,7 +49,13 @@ export type MutationUpdateTodoArgs = {
 
 export type Query = {
   __typename?: 'Query';
+  hello: Hello;
   todos: Array<Todo>;
+};
+
+
+export type QueryHelloArgs = {
+  name?: InputMaybe<Scalars['String']>;
 };
 
 export type Todo = {
@@ -135,6 +147,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   DateTime: ResolverTypeWrapper<Scalars['DateTime']>;
+  Hello: ResolverTypeWrapper<Hello>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
@@ -147,6 +160,7 @@ export type ResolversTypes = {
 export type ResolversParentTypes = {
   Boolean: Scalars['Boolean'];
   DateTime: Scalars['DateTime'];
+  Hello: Hello;
   ID: Scalars['ID'];
   Mutation: {};
   Query: {};
@@ -159,6 +173,12 @@ export interface DateTimeScalarConfig extends GraphQLScalarTypeConfig<ResolversT
   name: 'DateTime';
 }
 
+export type HelloResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Hello'] = ResolversParentTypes['Hello']> = {
+  message?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  textId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type MutationResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
   addTodo?: Resolver<ResolversTypes['Todo'], ParentType, ContextType, RequireFields<MutationAddTodoArgs, 'title'>>;
   deleteTodo?: Resolver<ResolversTypes['Todo'], ParentType, ContextType, RequireFields<MutationDeleteTodoArgs, 'todoId'>>;
@@ -166,6 +186,7 @@ export type MutationResolvers<ContextType = Context, ParentType extends Resolver
 };
 
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
+  hello?: Resolver<ResolversTypes['Hello'], ParentType, ContextType, Partial<QueryHelloArgs>>;
   todos?: Resolver<Array<ResolversTypes['Todo']>, ParentType, ContextType>;
 };
 
@@ -189,6 +210,7 @@ export type UserResolvers<ContextType = Context, ParentType extends ResolversPar
 
 export type Resolvers<ContextType = Context> = {
   DateTime?: GraphQLScalarType;
+  Hello?: HelloResolvers<ContextType>;
   Mutation?: MutationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
   Todo?: TodoResolvers<ContextType>;

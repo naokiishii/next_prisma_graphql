@@ -16,6 +16,12 @@ export type Scalars = {
   DateTime: string;
 };
 
+export type Hello = {
+  __typename?: 'Hello';
+  message?: Maybe<Scalars['String']>;
+  textId?: Maybe<Scalars['String']>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addTodo: Todo;
@@ -42,7 +48,13 @@ export type MutationUpdateTodoArgs = {
 
 export type Query = {
   __typename?: 'Query';
+  hello: Hello;
   todos: Array<Todo>;
+};
+
+
+export type QueryHelloArgs = {
+  name?: InputMaybe<Scalars['String']>;
 };
 
 export type Todo = {

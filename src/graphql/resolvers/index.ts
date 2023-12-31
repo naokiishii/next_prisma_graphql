@@ -13,6 +13,13 @@ export const resolvers: Resolvers = {
       })
       return todos
     },
+    hello: async (_: {}, { name }, {}) => {
+      const reply = {
+        textId: String(Math.random()),
+        message: 'hello ' + (name ?? 'no name'),
+      }
+      return reply
+    },
   },
   Mutation: {
     addTodo: async (_: {}, { title }, { prisma, currentUser }) => {
