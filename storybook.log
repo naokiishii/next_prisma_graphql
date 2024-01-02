@@ -1,0 +1,20 @@
+➤ YN0000: · Yarn 4.0.2
+➤ YN0000: ┌ Resolution step
+➤ YN0085: │ + @apollo/client@npm:3.7.4, @graphql-codegen/cli@npm:2.16.4, @graphql-codegen/schema-ast@npm:2.6.1, @graphql-codegen/typescript-operations@npm:2.5.12, and 1722 more.
+➤ YN0000: └ Completed in 4s 591ms
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ micro is listed by your project with version 10.0.1, which doesn't satisfy what apollo-server-micro (pf5e5b) requests (^9.3.4).
+➤ YN0060: │ next is listed by your project with version 14.0.4, which doesn't satisfy what next-auth (p9a6c1) requests (^12.2.5 || ^13.0.0).
+➤ YN0002: │ nextjs-prisma-graphql-codegen-sample@workspace:. doesn't provide @testing-library/dom (p6cb4e), requested by @testing-library/user-event.
+➤ YN0002: │ nextjs-prisma-graphql-codegen-sample@workspace:. doesn't provide @typescript-eslint/parser (pe84d3), requested by @typescript-eslint/eslint-plugin.
+➤ YN0002: │ nextjs-prisma-graphql-codegen-sample@workspace:. doesn't provide graphql-tag (p79aea), requested by @graphql-codegen/typescript-react-apollo.
+➤ YN0002: │ nextjs-prisma-graphql-codegen-sample@workspace:. doesn't provide vite (p8cf56), requested by @vitejs/plugin-react.
+➤ YN0086: │ Some peer dependencies are incorrectly met; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0013: │ 5 packages were added to the project (+ 4.05 MiB).
+➤ YN0000: └ Completed in 1s 230ms
+➤ YN0000: ┌ Link step
+➤ YN0001: │ Error: While cloning /Volumes/ANKER SSD/work/next_prisma_graphql/next/nextjs-prisma-graphql-codegen-sample/node_modules/@storybook/core-common/node_modules/minipass -> /Volumes/ANKER SSD/work/next_prisma_graphql/next/nextjs-prisma-graphql-codegen-sample/node_modules/node-gyp/node_modules/minipass ENOENT: no such file or directory, scandir '/Volumes/ANKER SSD/work/next_prisma_graphql/next/nextjs-prisma-graphql-codegen-sample/node_modules/@storybook/core-common/node_modules/minipass'
+➤ YN0000: └ Completed in 4s 44ms
+➤ YN0000: · Failed with errors in 9s 948ms

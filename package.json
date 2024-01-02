@@ -15,7 +15,9 @@
     "typecheck": "tsc",
     "codegen": "graphql-codegen",
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@apollo/client": "3.7.4",
@@ -34,7 +36,8 @@
     "graphql": "16.6.0",
     "micro": "10.0.1",
     "micro-cors": "0.1.1",
-    "next": "14.0.4",
+    "minipass": "^7.0.4",
+    "next": "^14.0.4",
     "next-auth": "4.18.8",
     "nodemailer": "6.9.0",
     "react": "18.2.0",
@@ -48,6 +51,15 @@
     "@graphql-codegen/typescript-operations": "2.5.12",
     "@graphql-codegen/typescript-react-apollo": "3.3.7",
     "@graphql-codegen/typescript-resolvers": "2.7.12",
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/addon-themes": "^7.6.7",
+    "@storybook/blocks": "^7.6.7",
+    "@storybook/nextjs": "^7.6.7",
+    "@storybook/react": "^7.6.7",
+    "@storybook/test": "^7.6.7",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "14.4.3",
@@ -55,15 +67,19 @@
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@vitejs/plugin-react": "3.0.1",
     "autoprefixer": "10.4.13",
+    "daisyui": "^4.4.24",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-simple-import-sort": "8.0.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "jsdom": "21.0.0",
     "npm-run-all": "4.1.5",
     "postcss": "8.4.21",
     "prettier": "2.8.3",
     "prisma": "4.9.0",
+    "storybook": "^7.6.7",
     "tailwindcss": "3.2.4",
     "ts-node": "10.9.1",
     "vitest": "0.27.2"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

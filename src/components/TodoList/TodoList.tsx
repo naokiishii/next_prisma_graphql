@@ -78,7 +78,7 @@ export const TodoList: FC = () => {
           value={todoTitle}
           onChange={(e) => setTodoTitle(e.target.value)}
         ></input>
-        <button className="bg-gray-200 p-2">Add</button>
+        <button className="btn btn-primary">Add</button>
       </form>
       <ul className="mt-5">
         {todos.map((todo) => {
@@ -94,7 +94,12 @@ export const TodoList: FC = () => {
                 onChange={(e) => handleChange(todo.id, e.target.checked)}
               />
               <span> / </span>
-              <button onClick={() => handleDelete(todo.id)}>🗑️</button>
+              <button
+                className="btn btn-primary"
+                onClick={() => handleDelete(todo.id)}
+              >
+                🗑️
+              </button>
             </li>
           )
         })}
