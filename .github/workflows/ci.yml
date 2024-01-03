@@ -16,7 +16,7 @@ jobs:
           node-version: '18.x'
           cache: 'yarn'
       - run: yarn install
-      - run: yarn lint
+      - run: yarn format
   typecheck:
     runs-on: ubuntu-latest
     steps:
