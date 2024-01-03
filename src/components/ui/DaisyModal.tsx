@@ -78,12 +78,12 @@ export const DaisyModal = ({
               <button className="btn">{close}</button>
             </form>
           </div>
+          <style jsx>{`
+            div {
+              background-color: ${backgroundColor};
+            }
+          `}</style>
         </div>
-        <style jsx>{`
-          dialog {
-            background-color: ${backgroundColor};
-          }
-        `}</style>
       </dialog>
     </>
   )

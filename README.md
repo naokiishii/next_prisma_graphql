@@ -44,6 +44,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 First, run the development server:
 
 ```bash
+# before start
+npm install -g yarn
+yarn add
+
 # run docker
 docker-compose up -d
 # stop docker
@@ -53,10 +57,14 @@ docker-compose down
 yarn dev
 # launch prisma
 npx prisma studio
+
+# launch storybook
+yarn storybook
 ```
 
 Default:
-Next: http://localhost:3000/
-GraphQL: http://localhost:3000/api/graphql
-Prisma Studio: http://localhost:5555/
-MailHog: http://localhost:8025/
+
+- Next: http://localhost:3000/
+- GraphQL: http://localhost:3000/api/graphql
+- Prisma Studio: http://localhost:5555/
+- MailHog: http://localhost:8025/
