@@ -47,6 +47,7 @@ export const DaisyTextInput = ({
   const mode = primary ? 'input-primary' : ''
   const sizing =
     size === 'large' ? 'input-lg' : size === 'medium' ? 'input-md' : 'input-sm'
+  const color = 'bg-'
   return (
     <label className="form-control w-full max-w-xs">
       <div className="label">
@@ -62,7 +63,7 @@ export const DaisyTextInput = ({
         {...props}
       />
       <style jsx>{`
-        button {
+        input {
           background-color: ${backgroundColor};
         }
       `}</style>
